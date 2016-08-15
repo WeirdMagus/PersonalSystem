@@ -24,34 +24,40 @@ namespace PersonalSystem
 
 			if (!roleManager.RoleExists("Admin"))
 			{
-				var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+				var role = new IdentityRole();
 				role.Name = "Admin";
 				roleManager.Create(role);
 			}
 
 			if (!roleManager.RoleExists("Manager"))
 			{
-				var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+				var role = new IdentityRole();
 				role.Name = "Manager";
 				roleManager.Create(role);
 			}
 
 			if (!roleManager.RoleExists("Employee"))
 			{
-				var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+				var role = new IdentityRole();
 				role.Name = "Employee";
 				roleManager.Create(role);
 			}
 
-			if (!roleManager.RoleExists("Slave"))
+			if (!roleManager.RoleExists("Applicant"))
 			{
-				var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-				role.Name = "Slave";
+				var role = new IdentityRole();
+				role.Name = "Applicant";
 				roleManager.Create(role);
+			}
 
+			if (UserManager.FindByName("Baboon") == null)
+			{
 				var user = new ApplicationUser();
 				user.UserName = "Baboon";
+				user.FirstName = "IR";
+				user.LastName = "Baboon";
 				user.Email = "Baboon@Bananas.com";
+				user.Age = 26;
 
 				string userPWD = "WeRBaboon_8";
 
@@ -59,7 +65,7 @@ namespace PersonalSystem
 
 				if (chkUser.Succeeded)
 				{
-					UserManager.AddToRole(user.Id, "Slave");
+					UserManager.AddToRole(user.Id, "Applicant");
 				}
 			}
 		} 

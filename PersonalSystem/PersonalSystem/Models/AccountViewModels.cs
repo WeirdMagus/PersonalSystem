@@ -64,12 +64,29 @@ namespace PersonalSystem.Models
 
     public class RegisterViewModel
     {
-        [Required]
-        [EmailAddress]
-        [Display(Name = "Email")]
-        public string Email { get; set; }
+		[Required]
+		[StringLength(16, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
+		[Display(Name = "User Name")]
+		public string UserName { get; set; }
 
-        [Required]
+		[Required]
+		[StringLength(50, ErrorMessage = "{0} needs to be at least {2} characters", MinimumLength = 2)]
+		public string FirstName { get; set; }
+
+		[Required]
+		[StringLength(50, ErrorMessage = "{0} needs to be at least {2} characters", MinimumLength = 2)]
+		public string LastName { get; set; }
+
+		[Required]
+		[EmailAddress]
+		[Display(Name = "Email")]
+		public string Email { get; set; }
+
+		[Required]
+		[Display(Name = "Age")]
+		public int Age { get; set; }
+
+		[Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]

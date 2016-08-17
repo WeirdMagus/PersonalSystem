@@ -1,14 +1,13 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Testsida";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
 
-<div ng-app>
-    Angular-test: 1+1 = {{1+1}}
-</div>
+<p ng-app class="bg-success">
+    Angular funkar: <b>{{1+1 == 2}}</b>
+</p>
 
 <input type="button" class="btn btn-default" value="Testknapp"/>
 <input type="button" class="btn btn-sm" value="Testknapp 2" />

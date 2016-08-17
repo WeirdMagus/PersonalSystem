@@ -18,7 +18,7 @@ namespace PersonalSystem.Controllers
 
 		public ActionResult About()
 		{
-			ViewBag.Message = "Your application description page.";
+			ViewBag.Message = "Test av Angular & Bootstrap-komponenter";
 
 			return View();
 		}

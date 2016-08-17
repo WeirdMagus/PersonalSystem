@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -10,17 +11,19 @@ namespace PersonalSystem.Models
 	{
 		public int Id { get; set; }
 		[Required]
+		[Index(IsUnique = true)]
 		[StringLength(50, ErrorMessage = "{0} needs to be at least {1} characters", MinimumLength = 3)]
 		public string Name { get; set; }
 		public virtual ApplicationUser Admin { get; set; }
 		public virtual IEnumerable<Vacancy> Vacancies { get; set; }
-		public virtual IEnumerable<News> Newser { get; set; }
+		public virtual IEnumerable<News> News { get; set; }
 	}
 
 	public class Department
 	{
 		public int Id { get; set; }
 		[Required]
+		[Index(IsUnique = true)]
 		[StringLength(50, ErrorMessage = "{0} needs to be at least {1} characters", MinimumLength = 3)]
 		public string Name { get; set; }
 		public virtual Company Company { get; set; }
@@ -31,14 +34,15 @@ namespace PersonalSystem.Models
 	{
 		public int Id { get; set; }
 		[Required]
+		[Index(IsUnique = true)]
 		[StringLength(50, ErrorMessage = "{0} needs to be at least {1} characters", MinimumLength = 3)]
 		public string Name { get; set; }
 		public virtual Department Department { get; set; }
-		public virtual Schema Schema { get; set; }
+		public virtual Schedule Schedule { get; set; }
 		public virtual IEnumerable<ApplicationUser> Users { get; set; }
 	}
 
-	public class Schema
+	public class Schedule
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }

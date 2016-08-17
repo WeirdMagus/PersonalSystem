@@ -1,7 +1,9 @@
 ﻿using PersonalSystem.Models;
+using PersonalSystem.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -11,7 +13,6 @@ namespace PersonalSystem.Controllers
 	{
 		public ActionResult Index()
 		{
-			var db = new ApplicationDbContext();
 			return View();
 		}
 
@@ -27,6 +28,14 @@ namespace PersonalSystem.Controllers
 			ViewBag.Message = "Your contact page.";
 
 			return View();
+		}
+
+		public async Task<ActionResult> TESTVIEW()
+		{
+			CompanyRepository repo = new CompanyRepository();
+			Company createTest = new Company { Name = "654321" };
+			Company test = await repo.CreateCompany(createTest);
+			return View(await repo.GetAllCompanies());
 		}
 	}
 }

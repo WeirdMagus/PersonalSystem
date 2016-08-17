@@ -5,14 +5,14 @@ namespace PersonalSystem.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PersonalSystem.Models.ApplicationDbContext>
+	internal sealed class Configuration : DbMigrationsConfiguration<PersonalSystem.DataAccess.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(PersonalSystem.Models.ApplicationDbContext context)
+		protected override void Seed(PersonalSystem.DataAccess.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

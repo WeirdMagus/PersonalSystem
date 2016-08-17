@@ -26,8 +26,10 @@ namespace PersonalSystem.Controllers
 		public ActionResult Contact()
 		{
 			ViewBag.Message = "Your contact page.";
-
-			return View();
+			AddPhoneNumberViewModel vm = new AddPhoneNumberViewModel{
+				Number = "123"
+			};
+			return View(vm);
 		}
 
 		public async Task<ActionResult> TESTVIEW()

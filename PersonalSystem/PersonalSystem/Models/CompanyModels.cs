@@ -60,19 +60,24 @@ namespace PersonalSystem.Models
 	public class Vacancy
 	{
 		public int Id { get; set; }
-		[Required]
-		[StringLength(50, ErrorMessage = "{0} needs to be at least {1} characters", MinimumLength = 3)]
-		public string Name { get; set; }
-		public virtual IEnumerable<Application> Applications { get; set; }
+        [Required]
+        [StringLength(50, ErrorMessage = "{0} needs to be at least {1} characters", MinimumLength = 3)]
+        public string JobTitle { get; set; }
+        public virtual IEnumerable<Application> Applications { get; set; }
 	}
 
 	public class Application
 	{
 		public int Id { get; set; }
-		[Required]
-		[StringLength(50, ErrorMessage = "{0} needs to be at least {1} characters", MinimumLength = 3)]
-		public string Name { get; set; }
+        [Required]
+        [StringLength(5000, ErrorMessage = "{0} needs to be at least {1} characters", MinimumLength = 3)]
+        public string CoverLetter { get; set; }     // Personligt brev
+
+        [Required]
 		public virtual Vacancy Vacancy { get; set; }
+
+        [Required]
+        public virtual ApplicationUser Applicant { get; set; }
 	}
 
 }

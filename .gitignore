@@ -188,3 +188,5 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 PersonalSystem/PersonalSystem/App_Data/aspnet-PersonalSystem-20160812081845_log.ldf
+*.mdf
+PersonalSystem/PersonalSystem/App_Data/aspnet-PersonalSystem-20160812081845_log.ldf

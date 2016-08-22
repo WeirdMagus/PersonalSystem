@@ -95,5 +95,10 @@ namespace PersonalSystem.Controllers
 			Company test = await repo.CreateCompany(createTest);
 			return View(await repo.GetAllCompanies());
 		}
+
+        //public ActionResult Applications()
+        //{
+        //    return View();
+        //}
 	}
 }

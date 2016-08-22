@@ -20,9 +20,12 @@ namespace PersonalSystem.DataAccess
 
 		public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
 		{
-
 		}
 
+		public new IDbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
+		{
+			return base.Set<TEntity>();
+		}
 		public static ApplicationDbContext Create()
 		{
 			return new ApplicationDbContext();

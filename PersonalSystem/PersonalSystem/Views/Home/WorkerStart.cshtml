@@ -1,0 +1,53 @@
+﻿@model PersonalSystem.ViewModels.WorkerStartViewModel
+
+@{
+    ViewBag.Title = "WorkerStart";
+}
+
+<div class="container">
+    <br />
+    <br />
+
+    <fieldset class="scheduler-border">
+
+        <legend class="scheduler-border">Nyheter</legend>
+
+        <form action="">
+            <textarea name="news" cols="48" rows="10">
+                Nyhetskroppen - lägg märke till indragningen av texten på första raden och när man sparar i första positionen dras texten in igen.
+            </textarea>
+
+        </form>
+
+    </fieldset>
+
+    <fieldset class="scheduler-border">
+
+        <legend class="scheduler-border">Schema</legend>
+
+        <table class="visaSchema">
+            <tr>
+                <th></th>
+                <th>Måndag</th>
+                <th>Tisdag</th>
+                <th>Onsdag</th>
+                <th>Torsdag</th>
+                <th>Fredag</th>
+                <th>Lördag</th>
+                <th>Söndag</th>
+            </tr>
+            <tr>
+                <td>Starttid</td>
+                <td>8.00</td>
+                <td>9.00</td>
+            </tr>
+            <tr>
+                <td>Sluttid</td>
+                <td>17.00</td>
+                <td>18.00</td>
+            </tr>
+        </table>
+
+    </fieldset>
+</div>
+

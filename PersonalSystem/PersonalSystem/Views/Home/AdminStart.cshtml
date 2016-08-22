@@ -1,0 +1,112 @@
+﻿@model PersonalSystem.ViewModels.AdminStartViewModel
+
+@{
+    ViewBag.Title = "AdminStart";
+}
+
+<div class="container">
+    <br />
+    <br />
+
+    <fieldset class="scheduler-border">
+
+        <legend class="scheduler-border">Nyheter</legend>
+
+        <form action="">
+            <textarea name="news" cols="48" rows="10">
+                Nyhetskroppen - lägg märke till indragningen av texten på första raden och när man sparar i första positionen dras texten in igen.
+            </textarea>
+
+        </form>
+
+    </fieldset>
+
+    <fieldset class="scheduler-border">
+
+        <legend class="scheduler-border">Schema</legend>
+
+        <table style="width:100%">
+            <tr>
+                <th></th>
+                <th>Måndag</th>
+                <th>Tisdag</th>
+                <th>Onsdag</th>
+                <th>Torsdag</th>
+                <th>Fredag</th>
+                <th>Lördag</th>
+                <th>Söndag</th>
+            </tr>
+            <tr>
+                <td>Starttid</td>
+                <td>8.00</td>
+                <td>9.00</td>
+            </tr>
+            <tr>
+                <td>Sluttid</td>
+                <td>17.00</td>
+                <td>18.00</td>
+            </tr>
+        </table>
+
+    </fieldset>
+
+    <fieldset class="scheduler-border">
+
+        <legend class="scheduler-border">Sök anställd</legend>
+
+        <div>
+            <label></label><input type="text" name="employee">
+        </div>
+
+        <br />
+        <br />
+
+        <table class="visaAnställda">
+            <tr>
+                <th>Namn</th>
+                <th>Roll</th>
+            </tr>
+            <tr>
+                <td>Pelle Olsson</td>
+                <td>
+                    <select name="role1">
+                        <option selected> Nuvarande roll
+                        <option> Arbetare
+                        <option> Admin
+                        <option> Chef
+                        <option> Sökande
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Pelle Persson</td>
+                <td>
+                    <select name="role2">
+                        <option selected> Nuvarande roll
+                        <option> Arbetare
+                        <option> Admin
+                        <option> Chef
+                        <option> Sökande
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+    </fieldset>
+
+    <div>
+        <h4>
+            <u>
+                @Html.ActionLink("Skapa nyhet", "CreateNews", "Home")
+            </u>
+        </h4>
+    </div>
+
+    <div>
+        <h4>
+            <u>
+                @Html.ActionLink("Skapa schema / Ändra schema", "CreateSchedule", "Home")
+            </u>
+        </h4>
+    </div>
+</div>

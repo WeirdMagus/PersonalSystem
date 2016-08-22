@@ -1,0 +1,37 @@
+﻿@model PersonalSystem.ViewModels.CreateCompanyViewModel
+
+@{
+    ViewBag.Title = "CreateCompany";
+}
+
+<div class="container">
+    <br />
+    <br />
+
+    <fieldset class="scheduler-border">
+
+        <legend class="scheduler-border">Skapa företag</legend>
+
+        <div>
+            <label class="margin-right-5px">Företagsnamn</label><input type="text" name="company">
+        </div>
+        <br />
+        <br />
+        <div>
+            <label class="margin-right-35px">Avdelning</label><input type="text" name="department">
+        </div>
+        <br />
+        <div>
+            <label class="margin-left-55px margin-right-5px">Grupp</label><input type="text" name="group">
+        </div>
+        <br />
+        <div>
+            <span class="margin-left-55px glyphicon glyphicon-plus-sign" aria-hidden="true"></span> <span class="glyphicon-class">Lägg till grupp</span>
+        </div>
+        <br />
+        <div>
+            <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> <span class="glyphicon-class">Lägg till avdelning</span>
+        </div>
+
+    </fieldset>
+</div>

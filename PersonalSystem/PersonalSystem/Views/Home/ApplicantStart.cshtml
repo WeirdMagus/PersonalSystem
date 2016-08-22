@@ -1,7 +1,7 @@
-﻿@model PersonalSystem.ViewModels.AnonymousStartViewModel
+﻿@model PersonalSystem.ViewModels.ApplicantStartViewModel
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "ApplicantStart";
 }
 
 <div class="container">
@@ -45,4 +45,9 @@
         </ul>
 
     </fieldset>
+    <h4>
+        <u>
+            @Html.ActionLink("Skapa företag", "CreateCompany", "Home")
+        </u>
+    </h4>
 </div>

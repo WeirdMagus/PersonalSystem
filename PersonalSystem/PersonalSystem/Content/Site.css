@@ -24,28 +24,81 @@ textarea {
 }
 
 .btn {
-
-  border-radius: 9px;
-
+    border-radius: 9px;
 }
 
 .input-lg {
-
-  height: 35px;
-  font-size: 20px;
+    height: 35px;
+    font-size: 20px;
 }
 
 fieldset.scheduler-border {
     border: 1px groove #777 !important;
     padding: 0 1.4em 1.4em 1.4em !important;
     margin: 0 0 1.5em 0 !important;
-    -webkit-box-shadow:  0px 0px 0px 0px #2a2a2a;
-            box-shadow:  0px 0px 0px 0px #000;
+    -webkit-box-shadow: 0px 0px 0px 0px #2a2a2a;
+    box-shadow: 0px 0px 0px 0px #000;
 }
 
 legend.scheduler-border {
-    width:inherit; /* Or auto */
-    padding:0 10px; /* To give a bit of padding on the left and right */
-    border-bottom:none;
+    width: inherit; /* Or auto */
+    padding: 0 10px; /* To give a bit of padding on the left and right */
+    border-bottom: none;
 }
 
+.visaAnställda {
+    width: 40%;
+}
+
+.margin-right-5px {
+    margin-right: 5px;
+}
+
+.list-style-type-none {
+    list-style-type: none;
+}
+
+.button {
+    font-size: 17px;
+    border-radius: 3px 4px;
+}
+
+.button2 {
+    font-size: 17px;
+    border-radius: 3px 4px;
+    margin: 20px;
+}
+
+.visaSchema {
+    width: 100%;
+}
+
+.margin-left-55px {
+    margin-left: 55px;
+}
+
+.grupp {
+    font-weight: normal;
+    margin-left: 50px;
+    margin-right: 25px;
+}
+
+.editeraSchema {
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.ansökningsTabell {
+    height: 100%;
+    width: 75%;
+}
+
+.margin-right-35px {
+    margin-right: 35px;
+}
+
+.avdelning{
+    font-weight:normal;
+    text-decoration: underline;
+    margin-right: 54px;
+}

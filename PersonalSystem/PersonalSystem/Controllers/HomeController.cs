@@ -1,5 +1,6 @@
 ﻿using PersonalSystem.Models;
 using PersonalSystem.Repositories;
+using PersonalSystem.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,61 @@ namespace PersonalSystem.Controllers
 		{
 			return View();
 		}
+
+        public ActionResult ApplicantStart()
+        {
+            return View();
+        }
+
+        public ActionResult CreateCompany()
+        {
+            return View();
+        }
+
+        public ActionResult CreateNews()
+        {
+            return View();
+        }
+
+        public ActionResult AdminStart()
+        {
+            return View();
+        }
+
+        public ActionResult Application()
+        {
+            return View( new ApplicationViewModel{ Name="Pelle Persson"} );
+        }
+
+        public ActionResult WorkerStart()
+        {
+            return View();
+        }
+
+        public ActionResult MinaSidor()
+        {
+            return View();
+        }
+
+        public ActionResult CreateSchedule()
+        {
+            return View();
+        }
+
+        public ActionResult ChefStart()
+        {
+            return View();
+        }
+
+        public ActionResult ShowCompanies()
+        {
+            return View();
+        }
+
+        public ActionResult ShowVacancies()
+        {
+            return View();
+        }
 
 		public ActionResult About()
 		{

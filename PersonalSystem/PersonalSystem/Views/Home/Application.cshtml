@@ -1,0 +1,36 @@
+﻿@model PersonalSystem.ViewModels.ApplicationViewModel
+
+@{
+    ViewBag.Title = "Application";
+}
+
+<div class="container">
+
+    <h2>Ansökan</h2>
+
+    <h3>@Model.Name</h3>
+
+    <fieldset class="scheduler-border">
+
+        <legend class="scheduler-border">Personligt brev</legend>
+
+        <form action="">
+
+            <textarea name="news" cols="48" rows="19">
+                Den här tjänsten passar mig utmärkt för att ... - lägg märke till indragningen av texten på första raden och när man sparar i första positionen dras texten in igen.
+            </textarea>
+
+        </form>
+
+    </fieldset>
+    <br />
+    PellePerssonsCV.pdf<br />
+    <br />
+    PellePerssonsKonsultProfil.pdf
+    <br />
+    <br />
+    <br />
+    <button class="button">Kalla till intervju</button><button class="button2">Avvisa ansökan</button><button class="button">Godkänn ansökan</button>
+
+</div>
+

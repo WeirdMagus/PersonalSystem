@@ -1,0 +1,58 @@
+﻿@model PersonalSystem.ViewModels.MinaSidorViewModel
+
+@{
+    ViewBag.Title = "MinaSidor";
+}
+
+<div class="container">
+    <br />
+    <br />
+    <div>
+        <u>
+            <h4>
+                @Html.ActionLink("Byt lösenord", "ChangePassword", "Manage")
+            </h4>
+        </u>
+    </div>
+    <br />
+    <br />
+
+    <fieldset class="scheduler-border">
+
+        <legend class="scheduler-border">Mina ansökningar</legend>
+
+        <table class="ansökningsTabell">
+            <tr>
+                <th></th>
+                <th>Feedback</th>
+            </tr>
+            <tr>
+                <td>Bagare annons-id 1212</td>
+                <td>Kallad till intervju | Avvisad | Godkänd | Obehandlad</td>
+            </tr>
+            <tr>
+                <td>Rörmokare annons-id 31212</td>
+                <td>Godkänd</td>
+            </tr>
+        </table>
+
+    </fieldset>
+    <br />
+    <b>Mitt CV</b><br />
+    <br />
+    PellePerssonsCV.pdf
+    <br />
+    <br />
+    <button class="button">Ladda upp nytt CV</button><br />
+    <br />
+    <br />
+    <br />
+    <b>Konsultprofiler</b><br />
+    <br />
+    PellePerssonsKonsultProfil(Bagare).pdf<br />
+    PellePerssonsKonsultProfil(Rörmokare).pdf
+    <br />
+    <br />
+    <button class="button">Ladda upp ny konsultprofil</button>
+</div>
+

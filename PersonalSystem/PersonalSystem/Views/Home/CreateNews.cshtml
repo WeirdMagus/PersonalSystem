@@ -1,0 +1,33 @@
+﻿@model PersonalSystem.ViewModels.CreateCompanyViewModel
+
+@{
+    ViewBag.Title = "CreateNews";
+}
+
+<div class="container">
+    <br />
+    <br />
+
+    <fieldset class="scheduler-border">
+
+        <legend class="scheduler-border">Skapa nyhet</legend>
+
+        <div>
+            <label>Rubrik</label><br />
+            <input type="text" name="header">
+        </div>
+        <br />
+        <form action="">
+            <textarea name="news" cols="48" rows="24">
+                Nyhetskroppen - lägg märke till indragningen av texten på första raden och när man sparar i första positionen dras texten in igen.
+            </textarea>
+            <p></p>
+            <p><input type="submit" class="button" value="Spara nyhet"></p>
+
+        </form>
+
+        <input type=checkbox name="internalNews" unchecked> Intern nyhet
+
+    </fieldset>
+</div>
+
